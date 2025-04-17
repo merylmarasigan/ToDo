@@ -6,15 +6,15 @@ import List from './List';
 import {useState} from 'react'
 
 function App() {
-  const [tasks,setTasks] = useState(['eat','sleep', 'party'])
+  const [tasks,setTasks] = useState([])
 
   return (
     <div className="App container">
       <Heading/>
-      <div className='inputs'>
+      <div >
 
         <Input taskSetter={setTasks}/>
-        <List tasks = {tasks}/>
+        <List tasks = {tasks} taskSetter={setTasks}/>
 
       </div>
     </div>

@@ -3,16 +3,34 @@ body {
   background-color:#FFD4A1;
   
 } 
+.header{
+  text-align: center;
+  /* background-color: white; */
+
+}
+.header h1{
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+
+
+
+.container {
+  width: 100%;
+  max-width: 1140px; /* Max width for large screens */
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .App {
   display: flex;
   align-items: center;     /* horizontal */
   height: 100vh; 
   flex-direction: column;
-
-  
 }
+
 h1{
-  margin-top: 100px;
   color: #5C4033;
 }
 button{
@@ -24,8 +42,8 @@ button{
   background-color:#5C4033;
 }
 
+
 .list{
-  /* border: black solid 5px; */
   display: flex;
   flex-direction: column;
   justify-content: start;
@@ -36,76 +54,30 @@ button{
 }
 
 .task{
-  
-  padding: 20px;
   width: 100%;
-  box-sizing: border-box;
   margin: 10px;
   color: white;
   background-color: #5C4033 ;
-  display: flex;
-  align-items: center;
   border-radius: 10px;
+  flex-direction: column;
+}
 
-}
-/* Default for small devices */
-.container {
-  width: 100%;
-  max-width: 1140px; /* Max width for large screens */
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
-}
-.task input{
+.task-name{
+  margin-left: 1em;
   margin-right: 1em;
 }
 
-
-svg{
-  height: 10px;
-  width: 10px;
-  margin-left: auto;
-  cursor: pointer;
+.inputs{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  /* flex-direction: column; */
 }
-
-button, input[type='text']{
-  padding: 10px;
-}
-/* .inputs{
-  border: black solid 2px;
-} */
-
-input[type="checkbox"] {
-  accent-color:#5C4033; /* or any custom color */
-  background-color: white;
-}
-
-
-/* Medium devices: Tablet (≥768px) */
-@media (min-width: 768px) {
-  .container {
-    max-width: 750px;
-  }
-}
-
-/* Large devices: Desktop (≥992px) */
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-
-/* Extra large devices: Large Desktop (≥1200px) */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px;
-  }
-}
-
-/* Extra Extra large devices: Larger Desktop (≥1400px) */
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px;
-  }
+input{
+  border-radius:  5px;
+  display: flex;
+  gap: 10px;
+  width: 100%;
 }
