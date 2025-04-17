@@ -33,17 +33,6 @@ function Input({taskSetter}){
         value = {text}
         required/>
         
-        {/* <input
-        type='text'
-        placeholder='Enter any notes'
-        onChange={
-            (e) => {
-                setText(e.target.value);
-            }
-        }
-        name='TaskName'
-        value = {details}
-        /> */}
         <button onClick={handleSubmit}>Add Task</button>
     </form>
     );

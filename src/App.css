@@ -1,20 +1,9 @@
 body {
   font-family: 'Courier New', monospace;
   background-color:#FFD4A1;
+  text-decoration-color: #5C4033;
   
 } 
-.header{
-  text-align: center;
-  /* background-color: white; */
-
-}
-.header h1{
-  margin-top: 50px;
-  margin-bottom: 0px;
-}
-
-
-
 .container {
   width: 100%;
   max-width: 1140px; /* Max width for large screens */
@@ -23,16 +12,36 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.App {
+/* .App {
   display: flex;
-  align-items: center;     /* horizontal */
+  align-items: center;   
   height: 100vh; 
   flex-direction: column;
-}
+  border:#5C4033 1px solid;
+} */
+.header{
+  text-align: center;
 
-h1{
+}
+.header h1{
+  margin-top: 50px;
+  margin-bottom: 0px;
+}
+/* 
+svg{
+  height: 10px;
+  width: 10px;
+  margin-left: auto;
+  cursor: pointer;
+}
+ */
+
+
+
+h1, h3 {
   color: #5C4033;
 }
+
 button{
   border-radius: 10px;
   border: none;
@@ -60,11 +69,20 @@ button{
   background-color: #5C4033 ;
   border-radius: 10px;
   flex-direction: column;
+  padding: 5px;
 }
 
-.task-name{
-  margin-left: 1em;
-  margin-right: 1em;
+label > input{
+  border: red solid 2px;
+}
+
+
+input[type="text"]{
+  width: 100%;
+  padding: 0.5em;
+  border-radius:  5px;
+  border-color:  #5C4033;
+
 }
 
 .inputs{
@@ -73,11 +91,41 @@ button{
   align-items: center;
   gap: 1rem;
   width: 100%;
-  /* flex-direction: column; */
 }
-input{
-  border-radius:  5px;
-  display: flex;
-  gap: 10px;
-  width: 100%;
+
+input[type="checkbox"] {
+  accent-color: white; /* sets the checkmark color (supported in modern browsers) */
+  background-color: white;
+  border: 1px solid #5C4033; /* Optional: visible border */
+  margin-right: 10px;
+  margin-left: 10px;
 }
+
+/* Medium devices: Tablet (≥768px) */
+@media (min-width: 768px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+/* Large devices: Desktop (≥992px) */
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Extra large devices: Large Desktop (≥1200px) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* Extra Extra large devices: Larger Desktop (≥1400px) */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+
