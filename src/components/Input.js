@@ -1,6 +1,6 @@
 import {useState} from 'react'
 
-function Input({taskSetter}){
+function Input(props){
 
     const[text, setText] = useState('');
     const [{title, details}, setTask] = useState({title:'',details:''});
@@ -9,9 +9,7 @@ function Input({taskSetter}){
         if(text !== ''){
             e.preventDefault(); 
 
-            taskSetter((prevList)=>{
-                return [... prevList, text]
-            });
+           props.onAdd(text)
             
         }
        

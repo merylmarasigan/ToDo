@@ -8,12 +8,19 @@ import {useState} from 'react'
 function App() {
   const [tasks,setTasks] = useState([])
 
+
+  const addTask = (task) =>{
+    setTasks((prevValue) => {
+      return [...prevValue,task]
+    })
+  }
+
   return (
     <div className="App container">
       <Heading/>
       <div >
 
-        <Input taskSetter={setTasks}/>
+        <Input onAdd={addTask}/>
         <List tasks = {tasks} taskSetter={setTasks}/>
 
       </div>

@@ -14,7 +14,7 @@ const List  = (props) => {
     return(
     <form className='list'>
       {taskList.map((t, idx) => {
-        return <Task key={t} id={idx} task={t} deleteItem={deleteTask}/>
+        return <Task key={idx} id={idx} task={t} deleteItem={deleteTask}/>
       })}
         
     </form>
